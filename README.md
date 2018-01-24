@@ -120,6 +120,7 @@ Hooks are defined in the `application/config/hooks.php` file, add above hook int
   | # /application/widgets/StatWidget.php:
   | \app\widgets\StatWidget::run();
   | class Blog_model extends app\models\BaseModel {}
+  | class Blog extends app\libraries\BaseController {}
   | class Car_model implements app\contracts\CarInterface {}
   |
   | The called class need to define namespace to support PSR-4 Autoload 
@@ -183,13 +184,13 @@ class Car implements \app\interfaces\CarInterface {}
 
 ### Trait
 
-Create a trait under `application` directory, for eaxmple `application/libraries/Log.php`:
+Create a trait under `application` directory, for eaxmple `application/libraries/LogTrait.php`:
 
 ```php
 <?php
 namespace app\libraries;
 
-trait Log {}
+trait LogTrait {}
 ```
 
 Then inject the trait into a class, for eaxmple `application/controller/Blog.php`:
@@ -197,9 +198,27 @@ Then inject the trait into a class, for eaxmple `application/controller/Blog.php
 ```php
 class Blog extends CI_Controller
 {
-    use \app\libraries\Log;
+    use \app\libraries\LogTrait;
 }
 ```
+
+### Abstract
+
+Create an abstract under `application` directory, for eaxmple `application/libraries/BaseController.php`:
+
+```php
+<?php
+namespace app\libraries;
+
+abstract class BaseController extends \CI_Controller {}
+```
+
+Then define a class to extend above abstract class, for eaxmple `application/libraries/BaseController.php`:
+
+```php
+class Blog extends app\libraries\BaseController {}
+```
+
 ---
 
 CONCEPTION
@@ -207,7 +226,6 @@ CONCEPTION
 
 
 
----
 
 ---
 
