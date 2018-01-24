@@ -224,8 +224,9 @@ class Blog extends app\libraries\BaseController {}
 CONCEPTION
 ----------
 
+Codeigniter Loader is a good practice for loading one time instantiated component just like Yii2 Application Components, but it's lacking of Class mapping, which makes inconvenience to load classes including interfaces, traits, abstracts or extending classes.
 
-
+Thus, You could defind classes with PSR-4 Namespace while these classes are not component kind, even Helpers which you may want use static method and customized class name.
 
 ---
 
