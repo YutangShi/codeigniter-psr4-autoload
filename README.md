@@ -35,7 +35,8 @@ Autoload class files with PSR-4 namespace:
 \app\widgets\StatWidget::run();
 
 class Blog_model extends app\models\BaseModel {}
-class Car_model implements app\contracts\CarInterface {}
+class Blog extends app\libraries\BaseController {}
+class Car implements app\contracts\CarInterface {}
 ```
 
 More specifically, create a class with namespace refering to the file path `\application\helpers\`:
@@ -179,6 +180,26 @@ class Car implements \app\interfaces\CarInterface {}
 
 > In this case, the `Car` lib could be called by using `new \app\libraries\Car;`.
 
+
+### Trait
+
+Create a trait under `application` directory, for eaxmple `application/libraries/Log.php`:
+
+```php
+<?php
+namespace app\libraries;
+
+trait Log {}
+```
+
+Then inject the trait into a class, for eaxmple `application/controller/Blog.php`:
+
+```php
+class Blog extends CI_Controller
+{
+    use \app\libraries\Log;
+}
+```
 ---
 
 CONCEPTION
