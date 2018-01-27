@@ -15,11 +15,11 @@ CodeIgniter 3 PSR-4 Autoloader for Application
 FEATURES
 --------
 
-*1. **PSR-4 Namespace** support as Yii2 & Laravel elegant patterns like*
+- ***PSR-4 Namespace** support as Yii2 & Laravel elegant patterns like*
 
-*2. Easy way to use **Interface, Trait, Abstract and Extending Class***
+- *Easy way to use **Interface, Trait, Abstract and Extending Class***
 
-*3. **Whole Codeigniter application** directory structure support*
+- ***Whole Codeigniter application** directory structure support*
 
 
 DEMONSTRATION
