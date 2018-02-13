@@ -25,7 +25,7 @@ FEATURES
 DEMONSTRATION
 -------------
 
-Autoload class files by PSR-4 namespace with `app` prefix:
+Autoload class files by PSR-4 namespace with `app` prefix in Codeigniter:
 
 ```php
 # /application/libraries/MemberService.php:
