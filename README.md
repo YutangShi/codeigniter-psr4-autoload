@@ -25,7 +25,7 @@ FEATURES
 DEMONSTRATION
 -------------
 
-Autoload class files with PSR-4 namespace:
+Autoload class files by PSR-4 namespace with `app` prefix:
 
 ```php
 # /application/libraries/MemberService.php:
@@ -136,6 +136,8 @@ $hook['pre_system'][] = [new yidas\Psr4Autoload, 'register'];
 
 USAGE
 -----
+
+After installation, the namespace prefix `app` is used for the current Codeigniter application directory.
 
 ### Extending Class
 
